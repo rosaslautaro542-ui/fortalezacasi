@@ -1,55 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortaleza Casino</title>
+  <title>Casino</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #111;
+      background: #180028;
+      color: #fff;
       text-align: center;
     }
 
-    /* Barra de juegos */
-   .juegos-barra {
-  width: 100%;
-  display: flex;
-  justify-content: space-between; /* reparte los juegos */
-  background-color: #2b0033;
-  padding: 10px;
-}
-
-.juegos-barra img {
-  flex: 1;                    /* cada imagen ocupa parte del ancho */
-  margin: 0 5px;
-  border-radius: 12px;
-  max-width: 120px;           /* que no se hagan gigantes en pantallas grandes */
-  height: auto;
-}
-
-    /* Oculta barra fea del scroll en algunos navegadores */
-    .juegos-barra::-webkit-scrollbar {
-      display: none;
+    /* Banner */
+    .banner {
+      position: relative;
+      background: url("fondoo.jpg") no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
-  </style>
-</head>
-<body>
 
-  <!-- Barra de juegos -->
-  <div class="juegos-barra">
-    <img src="https://via.placeholder.com/120x120?text=Juego+1" alt="Juego 1">
-    <img src="https://via.placeholder.com/120x120?text=Juego+2" alt="Juego 2">
-    <img src="https://via.placeholder.com/120x120?text=Juego+3" alt="Juego 3">
-    <img src="https://via.placeholder.com/120x120?text=Juego+4" alt="Juego 4">
-    <img src="https://via.placeholder.com/120x120?text=Juego+5" alt="Juego 5">
-    <img src="https://via.placeholder.com/120x120?text=Juego+6" alt="Juego 6">
-    <img src="https://via.placeholder.com/120x120?text=Juego+7" alt="Juego 7">
-  </div>
+    .banner h1 {
+      font-size: 28px;
+      margin: 10px;
+    }
 
-</body>
-</html>
+    .banner h2 {
+      font-size: 20px;
+      margin: 5px;
+      color: #FFD700;
+    }
 
+    /* Botón WhatsApp */
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #7d2cff;
+      color: #fff;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 15px;
+      border: 2px solid #ffb400;
+    }
+
+    .whatsapp-btn img {
+      width: 24px;
+      margin-right: 8px;
+    }
+
+    /* Carrusel */
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      background: #2a004d;
+      padding: 20px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: calc(250px * 8); /* ancho total aprox (ancho img + margen * cantidad) */
+      animation: scroll 20s linear infinite;
+    }
+
+    .carousel img {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      margin: 0 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100%
