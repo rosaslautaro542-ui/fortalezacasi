@@ -22,17 +22,31 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      text-align: center;
+    }
+
+    /* Contenedor del texto con fondo */
+    .texto-banner {
+      background: rgba(0, 0, 0, 0.6); /* Fondo negro transparente */
+      padding: 15px 25px;
+      border-radius: 12px;
+      display: inline-block;
     }
 
     .banner h1 {
       font-size: 28px;
       margin: 10px;
+      color: #fff;
+      text-shadow: 2px 2px 6px #000; /* sombra */
+      -webkit-text-stroke: 1px #000; /* contorno */
     }
 
     .banner h2 {
       font-size: 20px;
       margin: 5px;
       color: #FFD700;
+      text-shadow: 2px 2px 6px #000;
+      -webkit-text-stroke: 1px #000;
     }
 
     /* Botón WhatsApp */
@@ -48,6 +62,13 @@
       text-decoration: none;
       margin-top: 15px;
       border: 2px solid #ffb400;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #6920d6;
+      transform: scale(1.05);
     }
 
     .whatsapp-btn img {
@@ -86,8 +107,10 @@
 
   <!-- Banner -->
   <div class="banner">
-    <h1>🔥 PEDÍ TU BONO DE BIENVENIDA 🔥</h1>
-    <h2>BONO DEL 30%</h2>
+    <div class="texto-banner">
+      <h1>🔥 PEDÍ TU BONO DE BIENVENIDA 🔥</h1>
+      <h2>BONO DEL 30%</h2>
+    </div>
     <a href="https://wa.me/2645472914" class="whatsapp-btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
       ¡QUIERO MI USUARIO!
