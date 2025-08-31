@@ -8,13 +8,22 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('fondoo.jpg') no-repeat center center fixed;
-      height: 400px;
-      background-size: cover;
+      background: url('fondoo.jpg') no-repeat center top;
+      background-size: cover;       /* Por defecto en PC */
+      background-attachment: fixed;
+      background-color: #180028;    /* Color de respaldo */
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+    }
+
+    /* Ajuste especial para celulares */
+    @media (max-width: 768px) {
+      body {
+        background-size: contain;   /* Que no se agrande tanto */
+        background-position: top center;
+      }
     }
 
     /* Recuadro principal */
@@ -156,10 +165,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
