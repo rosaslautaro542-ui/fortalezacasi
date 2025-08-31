@@ -8,120 +8,105 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("fondoo.jpg") no-repeat center center/cover; /* tu fondo */
+      background: url('fondoo.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       text-align: center;
     }
 
-    /* Caja central */
-    .card {
-      max-width: 400px;
-      margin: 60px auto;
-      background: rgba(0, 0, 0, 0.85);
-      border-radius: 20px;
-      padding: 30px 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-    }
-
-    .card h1 {
-      font-size: 22px;
-      margin: 0 0 10px;
-    }
-
-    .card h1 span {
-      font-size: 26px;
-      color: #ffb400;
-      display: block;
-      margin-top: 10px;
+    /* Banner */
+    .banner {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 2.5em;
+      font-weight: bold;
     }
 
     /* Botón WhatsApp */
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #7d2cff;
-      color: #fff;
-      padding: 14px 22px;
-      font-size: 16px;
+    .btn-wsp {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 25px;
+      background: #25D366;
+      color: white;
+      font-size: 1.2em;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 50px;
       text-decoration: none;
-      margin: 20px 0;
-      border: 2px solid #ffb400;
       transition: 0.3s;
     }
-
-    .whatsapp-btn img {
-      width: 20px;
-      margin-right: 8px;
+    .btn-wsp:hover {
+      background: #1ebe5d;
     }
 
-    .whatsapp-btn:hover {
-      background: #6920d6;
-      transform: scale(1.05);
+    /* Carruseles */
+    .carrusel {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 40px 0;
     }
 
-    /* Juegos */
-    .games {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px 0 10px;
+    .carrusel img {
+      height: 120px;
+      margin: 0 15px;
+      vertical-align: middle;
     }
 
-    .games img {
-      width: 70px;
-      height: 70px;
-      border-radius: 12px;
+    .carrusel-contenido {
+      display: inline-block;
+      padding-left: 100%;
+      animation: slide 25s linear infinite;
     }
 
-    /* Texto extra */
-    .texto-extra {
-      font-size: 14px;
-      color: #ddd;
-      margin-top: 8px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    /* Footer con logos */
-    .footer {
-      margin-top: 30px;
-    }
-
-    .footer img {
-      height: 40px;
-      margin: 0 10px;
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>🔥 PEDÍ TU BONO DE BIENVENIDA 🔥 <br><span>BONO DEL 30%</span></h1>
-    <a href="https://wa.me/2645472914" class="whatsapp-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-      ¡QUIERO MI USUARIO!
-    </a>
+  <!-- Banner -->
+  <div class="banner">
+    Fortaleza Casino
+  </div>
 
-    <div class="games">
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/5491123456789" class="btn-wsp" target="_blank">
+    Quiero mi Usuario 💰
+  </a>
+
+  <!-- Carrusel Juegos -->
+  <h2>🎰 Nuestros Juegos</h2>
+  <div class="carrusel">
+    <div class="carrusel-contenido">
+      <img src="juego1.jpeg" alt="Juego 1">
+      <img src="juego2.jpeg" alt="Juego 2">
+      <img src="juego3.jpeg" alt="Juego 3">
+      <img src="juego4.jpeg" alt="Juego 4">
+      <!-- Repetidos para loop infinito -->
       <img src="juego1.jpeg" alt="Juego 1">
       <img src="juego2.jpeg" alt="Juego 2">
       <img src="juego3.jpeg" alt="Juego 3">
       <img src="juego4.jpeg" alt="Juego 4">
     </div>
-
-    <p class="texto-extra">RULETA EN VIVO · SLOTS · APUESTAS DEPORTIVAS</p>
   </div>
 
-  <div class="footer">
-    <img src="bg.png" alt="Logo 1">
-    <img src="pg.png" alt="Logo 2">
-    <img src="prgp.png" alt="Logo 3">
+  <!-- Carrusel Proveedores -->
+  <h2>🤝 Nuestros Proveedores</h2>
+  <div class="carrusel">
+    <div class="carrusel-contenido">
+      <img src="prgp.png" alt="Proveedor PRGP">
+      <img src="pg.png" alt="Proveedor PG">
+      <img src="bp.png" alt="Proveedor BP">
+      <!-- Repetidos para loop infinito -->
+      <img src="prgp.png" alt="Proveedor PRGP">
+      <img src="pg.png" alt="Proveedor PG">
+      <img src="bp.png" alt="Proveedor BP">
+    </div>
   </div>
 
 </body>
 </html>
-
-
