@@ -15,22 +15,21 @@
     }
 
     /* Barra de juegos */
-    .juegos-barra {
-      width: 100%;              
-      display: flex;            
-      flex-wrap: nowrap;        
-      overflow-x: auto;         
-      background-color: #2b0033;
-      padding: 10px;
-    }
+   .juegos-barra {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* reparte los juegos */
+  background-color: #2b0033;
+  padding: 10px;
+}
 
-    .juegos-barra img {
-      flex: 0 0 auto;           
-      margin: 0 8px;
-      border-radius: 12px;      
-      width: 120px;             /* tamaño fijo para que se vean iguales */
-      height: auto;
-    }
+.juegos-barra img {
+  flex: 1;                    /* cada imagen ocupa parte del ancho */
+  margin: 0 5px;
+  border-radius: 12px;
+  max-width: 120px;           /* que no se hagan gigantes en pantallas grandes */
+  height: auto;
+}
 
     /* Oculta barra fea del scroll en algunos navegadores */
     .juegos-barra::-webkit-scrollbar {
@@ -53,3 +52,4 @@
 
 </body>
 </html>
+
