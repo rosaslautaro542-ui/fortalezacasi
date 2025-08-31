@@ -65,8 +65,8 @@
 
     .carousel-track {
       display: flex;
-      width: calc(250px * 8); /* ancho total aprox (ancho img + margen * cantidad) */
-      animation: scroll 20s linear infinite;
+      width: max-content;
+      animation: scroll 15s linear infinite;
     }
 
     .carousel img {
@@ -74,9 +74,40 @@
       height: 120px;
       border-radius: 15px;
       margin: 0 10px;
-      flex-shrink: 0;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100%
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>🔥 PEDÍ TU BONO DE BIENVENIDA 🔥</h1>
+    <h2>BONO DEL 30%</h2>
+    <a href="https://wa.me/2645472914" class="whatsapp-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      ¡QUIERO MI USUARIO!
+    </a>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="juego1.jpeg" alt="Juego 1">
+      <img src="juego2.jpeg" alt="Juego 2">
+      <img src="juego3.jpeg" alt="Juego 3">
+      <img src="juego4.jpeg" alt="Juego 4">
+      <!-- Repetidos para efecto infinito -->
+      <img src="juego1.jpeg" alt="Juego 1">
+      <img src="juego2.jpeg" alt="Juego 2">
+      <img src="juego3.jpeg" alt="Juego 3">
+      <img src="juego4.jpeg" alt="Juego 4">
+    </div>
+  </div>
+
+</body>
+</html>
